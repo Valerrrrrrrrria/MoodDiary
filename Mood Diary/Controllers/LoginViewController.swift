@@ -25,5 +25,15 @@ class LoginViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(loginViewConstraints)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loginView.continueButton.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
+    }
+    
+    @objc func continueTapped() {
+        let tabController = TabController()
+        tabController.modalPresentationStyle = .fullScreen
+        self.present(tabController, animated: true)
+    }
 }
 

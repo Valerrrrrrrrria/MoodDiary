@@ -15,6 +15,10 @@
 		382C262B2E1576C700231111 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C262A2E1576C700231111 /* LoginView.swift */; };
 		382C262D2E15839A00231111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 382C262C2E15839A00231111 /* Localizable.xcstrings */; };
 		382C26322E1585CF00231111 /* SF-Compact-Rounded-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 382C26312E1585BD00231111 /* SF-Compact-Rounded-Regular.ttf */; };
+		382C26352E16B7AB00231111 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C26342E16B7AB00231111 /* MainViewController.swift */; };
+		382C26372E16B91600231111 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C26362E16B91600231111 /* CalendarViewController.swift */; };
+		382C26392E16B92D00231111 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C26382E16B92D00231111 /* SettingsViewController.swift */; };
+		382C263B2E16B99700231111 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C263A2E16B99700231111 /* TabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		382C262A2E1576C700231111 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		382C262C2E15839A00231111 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		382C26312E1585BD00231111 /* SF-Compact-Rounded-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Rounded-Regular.ttf"; sourceTree = "<group>"; };
+		382C26342E16B7AB00231111 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		382C26362E16B91600231111 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		382C26382E16B92D00231111 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		382C263A2E16B99700231111 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +69,15 @@
 		382C26142E09732E00231111 /* Mood Diary */ = {
 			isa = PBXGroup;
 			children = (
+				382C26332E16B77200231111 /* Controllers */,
 				382C26292E15765900231111 /* Views */,
 				382C26152E09732E00231111 /* AppDelegate.swift */,
 				382C26172E09732E00231111 /* SceneDelegate.swift */,
-				382C26192E09732E00231111 /* LoginViewController.swift */,
 				382C261E2E09732F00231111 /* Assets.xcassets */,
 				382C26202E09732F00231111 /* LaunchScreen.storyboard */,
 				382C26232E09732F00231111 /* Info.plist */,
 				382C26302E1585B700231111 /* fonts */,
+				382C263A2E16B99700231111 /* TabController.swift */,
 			);
 			path = "Mood Diary";
 			sourceTree = "<group>";
@@ -87,6 +96,17 @@
 				382C26312E1585BD00231111 /* SF-Compact-Rounded-Regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		382C26332E16B77200231111 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				382C26192E09732E00231111 /* LoginViewController.swift */,
+				382C26342E16B7AB00231111 /* MainViewController.swift */,
+				382C26362E16B91600231111 /* CalendarViewController.swift */,
+				382C26382E16B92D00231111 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,10 +182,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382C26372E16B91600231111 /* CalendarViewController.swift in Sources */,
+				382C263B2E16B99700231111 /* TabController.swift in Sources */,
 				382C261A2E09732E00231111 /* LoginViewController.swift in Sources */,
+				382C26392E16B92D00231111 /* SettingsViewController.swift in Sources */,
 				382C26162E09732E00231111 /* AppDelegate.swift in Sources */,
 				382C26182E09732E00231111 /* SceneDelegate.swift in Sources */,
 				382C262B2E1576C700231111 /* LoginView.swift in Sources */,
+				382C26352E16B7AB00231111 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
