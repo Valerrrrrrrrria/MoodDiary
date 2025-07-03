@@ -1,15 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "1" : {
-
-    },
-    "2" : {
-
-    },
-    "3" : {
-
-    },
     "app_continue" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -91,6 +82,57 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Mood Diary"
+          }
+        }
+      }
+    },
+    "tabbar_calendar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Календарь"
+          }
+        }
+      }
+    },
+    "tabbar_settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "tabbar_today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Сегодня"
           }
         }
       }
