@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EntryView: UIView {
+class LoginView: UIView {
     
     let headerFont = UIFont(name: "SFCompactRounded-Ultralight", size: 40)
     
