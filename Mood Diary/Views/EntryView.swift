@@ -11,6 +11,8 @@ class EntryView: UIView {
     
     let headerFont = UIFont(name: "SFCompactRounded-Ultralight", size: 40)
     
+    // MARK: - Subviews
+    
     private(set) lazy var headerView: UIImageView = {
         let imageView = UIImageView(image: UIImage(resource: .header))
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +47,50 @@ class EntryView: UIView {
         return subtitleLabel
     }()
     
+    private(set) lazy var enteranceButton: UIButton = {
+        let entBtn = UIButton(type: .system)
+        entBtn.setTitle(NSLocalizedString("app_login", comment: ""), for: .normal)
+        entBtn.setTitleColor(UIColor.appLightText, for: .normal)
+        entBtn.backgroundColor = UIColor.appDarkGreen
+        entBtn.layer.cornerRadius = 25
+        entBtn.clipsToBounds = true
+        entBtn.translatesAutoresizingMaskIntoConstraints = false
+        return entBtn
+    }()
+    
+    private(set) lazy var registrationButton: UIButton = {
+        let regBtn = UIButton(type: .system)
+        regBtn.setTitle(NSLocalizedString("app_registration", comment: ""), for: .normal)
+        regBtn.setTitleColor(UIColor.appText, for: .normal)
+        regBtn.backgroundColor = UIColor.appDarkBeige
+        regBtn.layer.cornerRadius = 25
+        regBtn.clipsToBounds = true
+        regBtn.translatesAutoresizingMaskIntoConstraints = false
+        return regBtn
+    }()
+    
+    private(set) lazy var continueButton: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle(NSLocalizedString("app_continue", comment: ""), for: .normal)
+        btn.setTitleColor(UIColor.appText, for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
+    // MARK: - Lifecycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = .appBackground
+        setSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private Methods
+    
     private func setSubviews() {
         addSubview(headerView)
         let headerViewConstraints = [
@@ -74,25 +120,31 @@ class EntryView: UIView {
             subtitleLabel.centerXAnchor.constraint(equalTo: titleLabel.centerXAnchor)
         ]
         NSLayoutConstraint.activate(subtitleLabelConstraints)
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .appBackground
         
-        setSubviews()
+        addSubview(enteranceButton)
+        let enteranceButtonConstraints = [
+            enteranceButton.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 60),
+            enteranceButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            enteranceButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            enteranceButton.heightAnchor.constraint(equalToConstant: 50)
+        ]
+        NSLayoutConstraint.activate(enteranceButtonConstraints)
+        
+        addSubview(registrationButton)
+        let registrationButtonConstraints = [
+            registrationButton.topAnchor.constraint(equalTo: enteranceButton.bottomAnchor, constant: 12),
+            registrationButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            registrationButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            registrationButton.heightAnchor.constraint(equalToConstant: 50)
+        ]
+        NSLayoutConstraint.activate(registrationButtonConstraints)
+        
+        addSubview(continueButton)
+        let continueButtonConstraints = [
+            continueButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -46),
+            continueButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            continueButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+        ]
+        NSLayoutConstraint.activate(continueButtonConstraints)
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
