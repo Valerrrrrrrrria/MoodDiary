@@ -8,13 +8,35 @@
 import UIKit
 
 class TabController: UITabBarController {
+    
+    let headerView = HeaderView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHeaderView()
+        setTabBarAppearance()
+        setupTabs()
+    }
+    
+    private func setupHeaderView() {
+        view.addSubview(headerView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        let headerViewConstraints = [
+            headerView.topAnchor.constraint(equalTo: view.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 88)
+        ]
+        NSLayoutConstraint.activate(headerViewConstraints)
+    }
+    
+    private func setTabBarAppearance() {
         tabBar.tintColor = .tabbarActive
         tabBar.unselectedItemTintColor = .tabbarInactive
         tabBar.backgroundColor = UIColor.appBackground
-        setupTabs()
+        let appearance = tabBar.standardAppearance
+        appearance.backgroundColor = UIColor.appBackground
+        tabBar.scrollEdgeAppearance = appearance
     }
     
     private func setupTabs() {

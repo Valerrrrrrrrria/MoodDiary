@@ -19,6 +19,7 @@
 		382C26372E16B91600231111 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C26362E16B91600231111 /* CalendarViewController.swift */; };
 		382C26392E16B92D00231111 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C26382E16B92D00231111 /* SettingsViewController.swift */; };
 		382C263B2E16B99700231111 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C263A2E16B99700231111 /* TabController.swift */; };
+		382C263D2E16CF9200231111 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C263C2E16CF9200231111 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		382C26362E16B91600231111 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		382C26382E16B92D00231111 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		382C263A2E16B99700231111 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		382C263C2E16CF9200231111 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				382C262A2E1576C700231111 /* LoginView.swift */,
+				382C263C2E16CF9200231111 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				382C261A2E09732E00231111 /* LoginViewController.swift in Sources */,
 				382C26392E16B92D00231111 /* SettingsViewController.swift in Sources */,
 				382C26162E09732E00231111 /* AppDelegate.swift in Sources */,
+				382C263D2E16CF9200231111 /* HeaderView.swift in Sources */,
 				382C26182E09732E00231111 /* SceneDelegate.swift in Sources */,
 				382C262B2E1576C700231111 /* LoginView.swift in Sources */,
 				382C26352E16B7AB00231111 /* MainViewController.swift in Sources */,
